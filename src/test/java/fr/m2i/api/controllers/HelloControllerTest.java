@@ -41,4 +41,19 @@ public class HelloControllerTest {
 
 	}
 	
+	@Test
+	public void testGetHome() throws Exception {
+        // Exécution d'une requête GET sur le point de terminaison "/hello" et attente d'un statut HTTP 200 (OK)
+		MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/"))
+                                  .andExpect(MockMvcResultMatchers.status().isOk()) // Vérifie que le statut de la réponse est 200 OK
+                                  .andReturn(); // Récupère le résultat de la requête
+		
+        // Récupération de la réponse sous forme de chaîne de caractères
+		String resultStr = result.getResponse().getContentAsString();
+		
+        // Vérification que la réponse est bien "Hello World"
+		assertEquals("home", resultStr);
+
+	}
+	
 }
