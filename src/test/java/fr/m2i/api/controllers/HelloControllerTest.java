@@ -54,8 +54,5 @@ public class HelloControllerTest {
 	    // Vérification que la réponse est bien la chaîne de caractères "home"
 	    assertEquals("home", resultStr);
 	}
-
-
-	}
 	
 }
