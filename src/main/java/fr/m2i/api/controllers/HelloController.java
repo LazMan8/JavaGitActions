@@ -13,7 +13,7 @@ public class HelloController {
     public String getHello(){
         // Méthode qui sera appelée lorsqu'une requête GET est envoyée à "/hello"
         // Retourne une simple chaîne de caractères "Hello World" comme réponse
-        return "Hello Bob l'eponge"; //return "Hello World";
+        return "Hello World";
         
         
     }
