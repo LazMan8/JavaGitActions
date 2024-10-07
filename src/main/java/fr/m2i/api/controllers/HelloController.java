@@ -14,7 +14,11 @@ public class HelloController {
         // Méthode qui sera appelée lorsqu'une requête GET est envoyée à "/hello"
         // Retourne une simple chaîne de caractères "Hello World" comme réponse
         return "Hello World";
-        
-        
     }
+    
+    @GetMapping("/")
+   public String home() {
+    	return "home";
+    }
+    
 }
