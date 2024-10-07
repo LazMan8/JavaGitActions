@@ -16,9 +16,13 @@ public class HelloController {
         return "Hello World";
     }
     
+ // Annotation @GetMapping pour associer cette méthode à une requête HTTP GET sur le chemin racine "/"
     @GetMapping("/")
-   public String home() {
-    	return "home";
+    public String home() {
+        // Méthode qui sera exécutée lorsqu'une requête GET est envoyée à "/"
+        // Retourne une chaîne de caractères "home" comme réponse
+        return "home";
     }
+
     
 }
