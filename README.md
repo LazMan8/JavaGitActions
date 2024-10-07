@@ -1,1 +1,3 @@
-[Pipeline](https://github.com/LazMan8/m2i-api/actions/workflows/ci.yml/badges.svg)
+[![Pipeline Status](https://github.com/LazMan8/pipeline/actions/workflows/ci.yml/badge.svg)]
+
+ 
