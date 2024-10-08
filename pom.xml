@@ -1,127 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<!-- Spécifie la version du modèle POM utilisée dans le fichier -->
-	<modelVersion>4.0.0</modelVersion>
-	<!-- Héritage du parent Spring Boot pour simplifier la configuration -->
-	<parent>
-		<!-- Identifiant de groupe du parent -->
-		<groupId>org.springframework.boot</groupId>
-		<!-- Nom de l'artefact du parent (Spring Boot starter parent) -->
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<!-- Version de Spring Boot -->
-		<version>3.3.4</version>
-		<!-- Chemin relatif pour rechercher le parent (vide ici car il est récupéré du dépôt Maven) -->
-		<relativePath/>
-		<!-- Recherche du parent dans le dépôt Maven -->
-	</parent>
-	<!-- Informations sur le projet -->
-	<!-- Identifiant de groupe propre à votre projet (généralement le domaine inversé) -->
-	<groupId>fr.m2i</groupId>
-	<!-- Nom de l'artefact du projet (nom unique) -->
-	<artifactId>api</artifactId>
-	<!-- Version du projet, ici en SNAPSHOT pour indiquer qu'il est en développement -->
-	<version>0.0.1-SNAPSHOT</version>
-	<!-- Nom du projet -->
-	<name>api</name>
-	<!-- Description courte du projet -->
-	<description>Demo project for Spring Boot</description>
-	<!-- URL du projet, vide dans cet exemple -->
-	<url/>
-	<!-- Informations de licence, ici laissées vides -->
-	<licenses>
-		<license/>
-	</licenses>
-	<!-- Informations sur les développeurs, ici laissées vides -->
-	<developers>
-		<developer/>
-	</developers>
-	<!-- Informations sur le système de gestion de code source (SCM), comme Git, SVN -->
-	<!-- Actuellement, ces informations sont vides -->
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<!-- Propriétés spécifiques du projet -->
-	<properties>
-		<!-- Version de Java utilisée pour le projet -->
-		<java.version>21</java.version>
-		<sonar.organizations>lazman8</sonar.organizations>
-		<sonar.projetKey>LazMan8_JavaGitActions</sonar.projetKey>
-		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-	</properties>
-	<!-- Déclaration des dépendances du projet -->
-	<dependencies>
-		<!-- Dépendance pour Spring Boot Web, utilisée pour créer des applications web -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-		<dependency>
-			<groupId>org.sonarsource.scanner.maven</groupId>
-			<artifactId>sonar-maven-plugin</artifactId>
-			<version>4.0.0.4121</version>
-		</dependency>
-		<!-- Dépendance pour les tests avec Spring Boot (inclut JUnit, Mockito, etc.) -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<!-- Scope test : uniquement pour les tests, non inclus dans la compilation finale -->
-		</dependency>
-		<!-- Dépendance pour Jacoco, un outil de couverture de code -->
-		<!-- Il génère des rapports sur la couverture des tests -->
-		<dependency>
-			<groupId>org.jacoco</groupId>
-			<artifactId>jacoco-maven-plugin</artifactId>
-			<version>0.8.12</version>
-		</dependency>
-	</dependencies>
-	<!-- Configuration du processus de construction (build) -->
-	<build>
-		<!-- Plugins utilisés lors de la phase de build -->
-		<plugins>
-			<!-- Plugin Maven pour Spring Boot, utilisé pour construire et exécuter des applications Spring Boot -->
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>4.0.0.4121</version>
-			</plugin>
-			<!-- Plugin Jacoco pour la couverture de code -->
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.12</version>
-				<!-- Exécution du plugin Jacoco lors de la phase de test -->
-				<executions>
-					<!-- Configuration de l'agent Jacoco pour l'instrumentation du code avant les tests -->
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-							<!-- Prépare l'agent Jacoco pour mesurer la couverture de code -->
-						</goals>
-					</execution>
-					<!-- Configuration pour générer le rapport Jacoco après les tests -->
-					<execution>
-						<id>report</id>
-						<phase>test</phase>
-						<!-- Phase de test pour générer le rapport après l'exécution des tests -->
-						<goals>
-							<goal>report</goal>
-							<!-- Objectif : générer un rapport de couverture -->
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Spécifie la version du modèle POM utilisée dans le fichier -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Héritage du parent Spring Boot pour simplifier la configuration -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version>
+        <relativePath/> <!-- Recherche du parent dans le dépôt Maven -->
+    </parent>
+
+    <!-- Informations sur le projet -->
+    <groupId>fr.m2i</groupId>
+    <artifactId>api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>api</name>
+    <description>Demo project for Spring Boot</description>
+    <url>http://example.com/api</url> <!-- URL placeholder -->
+
+    <!-- Propriétés spécifiques du projet -->
+    <properties>
+        <java.version>21</java.version>
+        <sonar.organization>lazman8</sonar.organization>
+        <sonar.projectKey>LazMan8_JavaGitActions</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
+
+    <!-- Déclaration des dépendances du projet -->
+    <dependencies>
+        <!-- Dépendance pour Spring Boot Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Dépendance pour le plugin Sonar -->
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>4.0.0.4121</version>
+        </dependency>
+
+        <!-- Dépendance pour les tests avec Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Dépendance pour Jacoco -->
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.12</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Configuration du processus de construction (build) -->
+    <build>
+        <plugins>
+            <!-- Plugin Maven pour Spring Boot -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- Plugin Sonar pour l'analyse de code -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
+            </plugin>
+
+            <!-- Plugin Jacoco pour la couverture de code -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.12</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
