@@ -47,6 +47,7 @@ jobs:
         fi
   code_quality:
     runs-on: ubuntu-latest
+    needs: tests
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 21
@@ -56,9 +57,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with maven
-      run: mvn clean verify sonar:sonar -Dsonar.token=788135fd4697361a132257ec1242f8a7d1bc95f6 -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=lazman8 -Dsonar.projectKey=LazMan8_JavaGitActions
+      run: mvn clean verify sonar:sonar -Dsonar.token=$SONAR_TOKEN -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=lazman8 -Dsonar.projectKey=LazMan8_JavaGitActions
       env:
-        SONNAR_TOKEN: ${{ secrets.SONNAR_TOKEN }}
+        SONNAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       
 
