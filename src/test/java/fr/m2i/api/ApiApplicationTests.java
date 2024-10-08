@@ -19,7 +19,6 @@ class ApiApplicationTests {
 		 */
 
 		// Lancer une exception si l'intention est de ne pas exécuter cette méthode.
-		// throw new UnsupportedOperationException("Cette méthode n'est pas encore implémentée.");
 		
 		// Ou compléter avec des assertions spécifiques si nécessaire.
 	}
