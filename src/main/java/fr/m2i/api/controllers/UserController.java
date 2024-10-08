@@ -15,6 +15,7 @@ public class UserController {
 		return "Ok";
 	}
 	
+	
 	@PostMapping("/user")
 	public String postUser(@RequestBody String username){
 		System.out.println(username + "is created");
