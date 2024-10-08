@@ -20,6 +20,7 @@ class ApiApplicationTests {
 
 		// Lancer une exception si l'intention est de ne pas exécuter cette méthode.
 		
+		
 		// Ou compléter avec des assertions spécifiques si nécessaire.
 	}
 }
