@@ -58,7 +58,7 @@ jobs:
     - name: Build with maven
       run: mvn clean verify sonar:sonar -Dsonar.token=$SONAR_TOKEN
       env:
-        SONNAR_TOKEN: ${{ secret.SONAR_TOKEN }}
+        SONNAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       
 
