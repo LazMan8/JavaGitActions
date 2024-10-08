@@ -50,6 +50,9 @@
 	<properties>
 		<!-- Version de Java utilisée pour le projet -->
 		<java.version>21</java.version>
+		<sonar.organizations>lazman8</sonar.organizations>
+		<sonar.projetKey>LazMan8_JavaGitActions</sonar.projetKey>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<!-- Déclaration des dépendances du projet -->
 	<dependencies>
