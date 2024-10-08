@@ -38,13 +38,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Dépendance pour le plugin Sonar -->
-        <dependency>
-            <groupId>org.sonarsource.scanner.maven</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>4.0.0.4121</version>
-        </dependency>
-
         <!-- Dépendance pour les tests avec Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
