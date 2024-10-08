@@ -4,7 +4,7 @@ package fr.m2i.api.controllers;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // Importation des classes pour les tests et les résultats de requêtes
-import javax.naming.spi.DirStateFactory.Result;
+//import javax.naming.spi.DirStateFactory.Result;
 
 import org.junit.jupiter.api.Test; // Annotation JUnit pour marquer une méthode comme un test
 import org.springframework.beans.factory.annotation.Autowired; // Annotation Spring pour injecter des dépendances
