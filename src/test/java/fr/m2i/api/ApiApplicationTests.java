@@ -8,7 +8,19 @@ class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
-		// empty
-	}
+		/*
+		 * Cette méthode de test est intentionnellement laissée vide.
+		 * Elle sert uniquement à vérifier que le contexte Spring Boot se charge correctement sans erreurs.
+		 * Aucun test logique spécifique n'est nécessaire ici.
+		 * 
+		 * Si vous souhaitez prévenir l'utilisation involontaire de cette méthode vide, 
+		 * vous pouvez lancer une exception UnsupportedOperationException.
+		 * Sinon, vous pouvez compléter l'implémentation avec des assertions supplémentaires si nécessaire.
+		 */
 
+		// Lancer une exception si l'intention est de ne pas exécuter cette méthode.
+		// throw new UnsupportedOperationException("Cette méthode n'est pas encore implémentée.");
+		
+		// Ou compléter avec des assertions spécifiques si nécessaire.
+	}
 }
